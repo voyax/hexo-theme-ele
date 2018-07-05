@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --watch --mode=development",
     "build": "webpack"
   },
   "keywords": [
@@ -15,7 +16,8 @@
   "license": "ISC",
   "dependencies": {
     "@babel/polyfill": "^7.0.0-beta.51",
-    "@babel/runtime": "^7.0.0-beta.51"
+    "@babel/runtime": "^7.0.0-beta.51",
+    "normalize.css": "^8.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.51",

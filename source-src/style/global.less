@@ -1,0 +1,42 @@
+@import '~normalize.css/normalize.css';
+
+/**
+ * 1. set border-box as default box-sizing
+ * 2. remove the gray background color from tab, default value is inherit
+**/
+html{
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  height: 100%;
+  font-family:"Hiragino Sans GB","华文细黑","STHeiti","微软雅黑", "Microsoft YaHei",SimHei,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 12px;
+}
+*, *::before, *::after{
+  box-sizing: inherit;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  padding-top: env(safe-area-inset-top); //为导航栏+状态栏的高度 88px
+  padding-left: env(safe-area-inset-left); //如果未竖屏时为0
+  padding-right: env(safe-area-inset-right); //如果未竖屏时为0
+  padding-bottom: env(safe-area-inset-bottom); //为底下圆弧的高度 34px
+}
+
+table{
+  border-collapse: collapse;
+  border-spacing: 0;
+  td, th{
+    padding: 0;
+  }
+}
+
+// headings
+
+//wrapper
+
+//page-head
+//page-foot
+//button

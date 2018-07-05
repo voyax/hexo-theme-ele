@@ -18,7 +18,7 @@ module.exports = {
       cacheGroups: {
         vender: {
           test: /[\\/]node_modules[\\/]/,
-          name: 'verndors',
+          name: 'vendor',
           chunks: 'all',
         }
       }
@@ -50,11 +50,23 @@ module.exports = {
           'postcss-loader',
           'less-loader',
         ],
-       }
+      },
+      {
+        test: /\.(gif|jpg|png)\??.*$/,
+        use: {
+          loader: 'url-loader?limit=500&name=img/[name].[ext]',
+        }
+      },
+      {
+        test: /\.(woff|svg|eot|ttf)\??.*$/,
+        use: {
+          loader: "file-loader?name=fonts/[name].[chunkhash:6].[ext]"
+        }
+      }
     ],
   },
   plugins: [
-    new CleanWebpackPlugin(['source']),
+    new CleanWebpackPlugin(['source'], { watch: false }),
     new HtmlWebpackPlugin({
       inject: false,
       template: './source-src/script.ejs',

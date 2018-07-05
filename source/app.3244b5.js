@@ -34,4 +34,4 @@ eval("__webpack_require__(/*! @babel/polyfill */\"./node_modules/@babel/polyfill
 
 /***/ })
 
-},[[0,"runtime","verndors"]]]);
+},[[0,"runtime","vendor"]]]);

@@ -60,7 +60,7 @@ module.exports = {
       {
         test: /\.(woff|svg|eot|ttf)\??.*$/,
         use: {
-          loader: "file-loader?name=fonts/[name].[chunkhash:6].[ext]"
+          loader: "file-loader?name=fonts/[name].[hash:6].[ext]"
         }
       }
     ],

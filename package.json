@@ -17,6 +17,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.0.0-beta.51",
     "@babel/runtime": "^7.0.0-beta.51",
+    "@fortawesome/fontawesome-free": "^5.1.0",
     "normalize.css": "^8.0.0"
   },
   "devDependencies": {

@@ -1,0 +1,181 @@
+/**
+ * 1. set border-box as default box-sizing
+ * 2. remove the gray background color from tab, default value is inherit
+**/
+html {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  height: 100%;
+  font-family: "Hiragino Sans GB", "\534E\6587\7EC6\9ED1", "STHeiti", "\5FAE\8F6F\96C5\9ED1", "Microsoft YaHei", SimHei, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  color: #333;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  padding-top: env(safe-area-inset-top);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+ul {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input,
+select,
+textarea,
+button {
+  outline: 0;
+}
+textarea,
+input {
+  -moz-user-modify: read-write-plaintext-only;
+  -webkit-user-modify: read-write-plaintext-only;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+table td,
+table th {
+  padding: 0;
+}
+/**
+* custom style
+*/
+img {
+  max-width: 100%;
+}
+input {
+  height: 30px;
+  line-height: 30px;
+  padding: 0 8px 0 10px;
+  border: 1px solid #e3e3e3;
+  outline: none;
+  border-radius: 4px;
+  transition: all 0.25s;
+}
+input:focus {
+  border-color: #56b7fc;
+}
+/**
+* utils
+*/
+.container {
+  max-width: 960px;
+  margin: auto;
+}
+.main-header {
+  height: 50px;
+  background: #F8FAFE;
+}
+.main-header .container {
+  display: flex;
+  align-items: center;
+}
+/* logo
+  ========================================================================== */
+.logo {
+  height: 40px;
+  margin-right: 1.2rem;
+}
+.logo-img {
+  width: 40px;
+  height: 40px;
+}
+/* nav
+  ========================================================================== */
+.main-nav {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+.main-nav .nav-list {
+  display: flex;
+}
+.main-nav .nav-list li {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  height: 50px;
+  font-size: 1.17rem;
+  padding: 0 1.2rem;
+  border-bottom: 2px solid transparent;
+}
+.main-nav .nav-list .nav-link {
+  transition: all 0.2s ease-in-out;
+}
+.main-nav .nav-list .nav-link:hover,
+.main-nav .nav-list .nav-link.active {
+  border-bottom: 2px solid #2593FC;
+}
+.main-nav .nav-list a {
+  color: #71777c;
+}
+.main-nav .nav-list a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+/* nav-separator
+  ========================================================================== */
+.nav-separator {
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  height: 24px;
+  border-left: 1px solid #ebedee;
+  line-height: 22px;
+  height: 22px;
+  vertical-align: middle;
+  display: inline-block;
+}
+/* nav search
+  ========================================================================== */
+.search-form {
+  position: relative;
+}
+.search-form input {
+  padding-left: 28px;
+  border: none;
+  background: transparent;
+}
+.search-form input::-webkit-input-placeholder {
+  color: rgba(149, 154, 163, 0.4);
+}
+.search-form input:-ms-input-placeholder {
+  color: rgba(149, 154, 163, 0.4);
+}
+.search-form input::-ms-input-placeholder {
+  color: rgba(149, 154, 163, 0.4);
+}
+.search-form input::placeholder {
+  color: rgba(149, 154, 163, 0.4);
+}
+.search-form i {
+  color: rgba(149, 154, 163, 0.4);
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+

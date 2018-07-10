@@ -1,14 +1,20 @@
-<header>
-  <a href="#">
-    <img src="" alt="voya" class="logo">
-  </a>
-  <nav>
-    <ul>
-      <li><a href="">首页</a></li>
-      <li><a href="">归档</a></li>
-      <li><a href="">分类</a></li>
-      <li><a href="">标签</a></li>
-      <li><a href="">关于</a></li>
-    </ul>
-  </nav>
+<header class="main-header">
+  <div class="container">
+    <a href="#" class="logo">
+      <img src="<%= theme.logo %>" alt="<%= theme.title %>" class="logo-img">
+    </a>
+    <span class="nav-separator"></span>
+    <form class="search-form">
+      <input type="search" placeholder="搜索文章" />
+      <i class="fas fa-search"></i>
+    </form>
+
+    <nav class="main-nav">
+      <ul class="nav-list">
+        <% for(let i in theme.menu){ %>
+          <li class="nav-link"><a href="<%- url_for(theme.menu[i]) %>"><%= i %></a></li>
+        <% } %>
+      </ul>
+    </nav>
+  </div>
 </header>

@@ -1,0 +1,36 @@
+<div class="container">
+  <%# 首页 #%>
+  <% if(is_home()){ %>
+    <ul class="article-list">
+      <% page.posts.each((post, index) => { %>
+        <li>
+          <a href="<%- url_for(post.path) %>">
+            <h2 class="title">
+              <%= post.title %>
+              <small><%= post.updated.format('YYYY.MM.DD') %></small>
+            </h2>
+          </a>
+          <div class="excerpt"><%- post.excerpt %></div>
+            <footer class="article-footer">
+              <div class="tags">
+                <% post.tags.each(tag => { %>
+                  <a class="tag" href="<%- url_for(tag.path)  %>"><%- tag.name %></a>
+                <% }) %>
+              </div>
+            </footer>
+        </li>
+      <% }) %>
+    </ul>
+
+    <% if(page.total > 1) { %>
+      <div class="pagination">
+        <%- paginator({
+          prev_text: '&laquo',
+          next_text: '&raquo;'
+        }) %>
+      </div>
+    <% } %>
+  <% } else if(is_post()){ %>
+    <%- partial('article', {post: page}) %>
+  <% } %>
+</div>

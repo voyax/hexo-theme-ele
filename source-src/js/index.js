@@ -1,3 +1,4 @@
 import '../style/index.less'
+import hljs from 'highlightjs/highlight.pack.min.js';
 
-console.log('hello world');
+hljs.initHighlightingOnLoad();

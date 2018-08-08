@@ -6,7 +6,7 @@ html {
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
   height: 100%;
-  font-family: "Hiragino Sans GB", "\534E\6587\7EC6\9ED1", "STHeiti", "\5FAE\8F6F\96C5\9ED1", "Microsoft YaHei", SimHei, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Songti SC", "Hiragino Sans GB", "\534E\6587\7EC6\9ED1", "STHeiti", "\5FAE\8F6F\96C5\9ED1", "Microsoft YaHei", SimHei, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #333;
 }
@@ -81,8 +81,25 @@ input:focus {
 * utils
 */
 .container {
-  max-width: 840px;
+  max-width: 815px;
   margin: auto;
+}
+.page--article-list {
+  width: 100%;
+  background: #fff;
+}
+.page--article {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: #F6F8FA;
+  overflow: hidden;
+}
+.page--article > .container {
+  background: #fff;
+  padding-left: 70px;
+  padding-right: 70px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 h1,
 h2,
@@ -90,7 +107,6 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: .7em;
   margin-bottom: .2em;
   line-height: 1.1em;
   font-weight: 300;
@@ -100,10 +116,11 @@ h1 {
 }
 h2 {
   font-size: 2em;
-  margin-bottom: .8em;
+  margin-bottom: .83em;
 }
 h3 {
   font-size: 1.7em;
+  margin-bottom: .83em;
 }
 h4 {
   font-size: 1.4em;
@@ -114,13 +131,56 @@ h6 {
 }
 p {
   line-height: 1.8em;
-  margin: 0 0 8px;
+  margin: 0 0 .8em;
 }
 blockquote {
   margin: 0;
   padding: 0 .6rem;
   border-left: 0.2rem solid #dfe2e5;
   color: #6a737d;
+}
+code {
+  padding: .2rem .4rem;
+  font-size: 90%;
+  background-color: #f8f9fa;
+  color: #bd4147;
+  border-radius: .25rem;
+}
+/**
+* article
+*/
+.page--article {
+  text-align: justify;
+  font-size: 18px;
+}
+.page--article h1 {
+  margin-top: 0;
+  margin-bottom: .5em;
+  font-size: 1.95552em;
+  font-weight: bold;
+}
+.page--article h2 {
+  font-size: 1.25em;
+  font-weight: bold;
+}
+.page--article h3 {
+  font-size: 1.125em;
+  font-weight: bold;
+}
+.page--article ul,
+.page--article ol {
+  padding-left: 2.2em;
+  line-height: 1.8em;
+  margin-bottom: 1em;
+}
+.page--article li > :first-child {
+  margin-bottom: 0;
+}
+.page--article img {
+  display: block;
+  margin: .5em auto;
+  max-width: 100%;
+  height: auto;
 }
 .main-header {
   height: 50px;
@@ -290,12 +350,8 @@ blockquote {
 .page-number {
   padding: 0 4px;
 }
-.main-footer {
-  margin-top: 20px;
-}
 .main-footer .container {
-  border-top: 1px solid #f0f0f0;
-  padding: 20px 0;
+  padding: 15px 0;
   color: rgba(0, 0, 0, 0.3);
 }
 

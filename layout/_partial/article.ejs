@@ -1,8 +1,16 @@
 <div class="page--article">
+  <% if(toc(post.content)){ %>
+    <div class="toc-container">
+      <%- toc(post.content) %>
+      <div class="toc-tip">Table of Contents ▼</div>
+    </div>
+  <% } %>
+
+
   <div class="container">
     <article>
-    <h1><%= post.title %></h1>
-    <%- post.content %>
+      <h1><%= post.title %></h1>
+      <%- post.content %>
   </article>
   </div>
 </div>

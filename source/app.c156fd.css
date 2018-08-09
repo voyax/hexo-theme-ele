@@ -151,7 +151,7 @@ code {
 */
 .page--article {
   text-align: justify;
-  font-size: 18px;
+  font-size: 16px;
 }
 .page--article h1 {
   margin-top: 0;
@@ -346,6 +346,46 @@ code {
 }
 .tag:hover {
   color: #787878;
+}
+.toc-container {
+  display: flex;
+  position: fixed;
+  top: 0;
+  font-size: 14px;
+  left: calc(-230px + 1.2em);
+  height: 100vh;
+  width: 230px;
+  overflow-x: hidden;
+  background: #F8F8F8;
+  transition: all .3s;
+}
+.toc-container ol {
+  list-style: none;
+}
+.toc-container.show {
+  left: 0;
+}
+.toc-link {
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.toc-tip {
+  padding-top: 1em;
+  width: 1.2em;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  background: rgba(0, 0, 0, 0.7);
+  color: #CCCCCC;
+}
+.toc {
+  padding: 1em;
+  font-size: 14px;
+  flex: 1;
+  overflow: hidden;
 }
 .page-number {
   padding: 0 4px;

@@ -10,7 +10,10 @@
   <div class="container">
     <article>
       <h1><%= post.title %></h1>
-      <%- post.content %>
+      <%- page.content %>
   </article>
+    <% if(page.type === 'categories'){ %>
+      <%- list_categories() %>
+    <% } %>
   </div>
 </div>

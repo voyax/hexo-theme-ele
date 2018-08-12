@@ -1,0 +1,19 @@
+<div class="page--archive">
+  <div class="container">
+    <div class="archive-title">
+      <%= page.category %>
+    </div>
+    <div class="archive-list">
+      <% page.posts.each(function(post, i){ %>
+        <div class="archive-item archive-type-<%= post.layout %>">
+          <div class="archive-item__date"><%= post.date.format('MM-DD')  %></div>
+          <div class="archive-item__title"><a href="<%- url_for(post.path) %>"><%= post.title %></a></div>
+        </div>
+      <% }) %>
+    </div>
+
+    <% if (page.total > 1){ %>
+      <%- partial('pagination') %>
+    <% } %>
+  </div>
+</div>

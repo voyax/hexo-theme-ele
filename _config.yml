@@ -2,13 +2,17 @@
 
 menu:
   首页: /
-  归档: /categories/
-  分类: /
-  关于: /
+  归档: /archives/
+  分类: /categories
+  关于: /about
 
 logo: http://oe54phg1r.bkt.clouddn.com/blog/2017-07-26-075816.jpg
 
 rss: /atom.xml
+
+widgets:
+- category
+- tag
 
 # 是否需要修改 root 路径
 # 如果您的网站存放在子目录中，例如 http://yoursite.com/blog，

@@ -1,41 +1,35 @@
-  <%# 首页 #%>
-  <% if(is_home()){ %>
-    <div class="page--article-list">
-      <div class="container">
-        <ul class="article-list">
-        <% page.posts.each((post, index) => { %>
-          <li>
-            <a href="<%- url_for(post.path) %>">
-              <h2 class="title">
-                <%= post.title %>
-                <small><%= post.updated.format('YYYY.MM.DD') %></small>
-              </h2>
-            </a>
-            <div class="excerpt"><%- post.excerpt %></div>
-              <footer class="article-footer">
-                <div class="tags">
-                  <% post.tags.each(tag => { %>
-                    <a class="tag" href="<%- url_for(tag.path)  %>"><%- tag.name %></a>
-                  <% }) %>
-                </div>
-              </footer>
-          </li>
-        <% }) %>
-      </ul>
-      </div>
-
+<div class="page--archive">
+  <div class="container">
+    <div class="archive-list">
+      <% if(is_category()){ %>
+        <div class="archive-title">
+          <i class="fas fa-barcode"></i>
+          <%= page.category %>
+        </div>
+      <% } else if(is_tag()){ %>
+        <div class="archive-title">
+          <i class="fas fa-tags"></i>
+          <%= page.tag %>
+        </div>
+      <% } %>
+      <% let last; %>
+      <% page.posts.each(function(post, i){ %>
+        <% let year = post.date.year(); %>
+        <% if (last != year && is_archive()){ %>
+          <% last = year; %>
+            <div class="archive-title">
+              <a href="<%- url_for('archives/' + year) %>" class="archive-title"><%= year %></a>
+            </div>
+        <% } %>
+        <div class="archive-item archive-type-<%= post.layout %>">
+          <div class="archive-item__date"><%= post.date.format('MM-DD')  %></div>
+          <div class="archive-item__title"><a href="<%- url_for(post.path) %>"><%= post.title %></a></div>
+        </div>
+      <% }) %>
     </div>
 
-    <% if(page.total > 1) { %>
-      <div class="pagination">
-        <div class="container">
-          <%- paginator({
-            prev_text: '&laquo',
-            next_text: '&raquo;'
-          }) %>
-        </div>
-      </div>
+    <% if (page.total > 1){ %>
+      <%- partial('pagination') %>
     <% } %>
-  <% } else if(is_post()){ %>
-    <%- partial('article', {post: page}) %>
-  <% } %>
+  </div>
+</div>

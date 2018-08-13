@@ -5,14 +5,15 @@
     </a>
     <span class="nav-separator"></span>
     <form class="search-form">
-      <input type="search" placeholder="搜索文章" />
-      <i class="fas fa-search"></i>
+      <%- search_form({ class: 'search-form', text: '搜索文章' }) %>
     </form>
 
     <nav class="main-nav">
       <ul class="nav-list">
         <% for(let i in theme.menu){ %>
-          <li class="nav-link"><a href="<%- url_for(theme.menu[i]) %>"><%= i %></a></li>
+          <li class="nav-link <% if(is_current(theme.menu[i])){ %>active<% } %>">
+            <a href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
+          </li>
         <% } %>
       </ul>
     </nav>

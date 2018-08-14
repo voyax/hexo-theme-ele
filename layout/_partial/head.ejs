@@ -4,6 +4,23 @@
   <meta http-equiv=”Cache-Control” content="no-transform" />
   <meta http-equiv="Cache-Control" content="no-siteapp">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <%
+    let title = page.title;
+    if (is_archive()){
+      title = '归档';
+
+      if (is_month()){
+        title += ': ' + page.year + '/' + page.month;
+      } else if (is_year()){
+        title += ': ' + page.year;
+      }
+    } else if (is_category()){
+      title = '分类: ' + page.category;
+    } else if (is_tag()){
+      title = 'Tag: ' + page.tag;
+    }
+  %>
+  <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
+
   <%- partial('_partial/style') %>
 </head>

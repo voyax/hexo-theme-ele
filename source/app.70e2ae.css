@@ -96,6 +96,7 @@ input:focus {
 /* article page
   ========================================================================== */
 .page--article {
+  min-height: calc(100vh - 100px);
   padding-top: 20px;
   padding-bottom: 20px;
   background: #F6F8FA;
@@ -112,6 +113,7 @@ input:focus {
   ========================================================================== */
 .page--archive {
   padding-top: 24px;
+  min-height: calc(100vh - 100px);
 }
 h1,
 h2,
@@ -360,7 +362,7 @@ code {
   color: #787878;
 }
 .archive-list {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   font-size: 16px;
   line-height: 1.8;
 }
@@ -449,6 +451,9 @@ code {
 }
 .page-number {
   padding: 0 4px;
+}
+.main-footer {
+  height: 50px;
 }
 .main-footer .container {
   padding: 15px 0;

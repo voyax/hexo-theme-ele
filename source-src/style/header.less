@@ -2,9 +2,12 @@
   height: 50px;
   background: #FDFDFD;
   box-shadow: 0 2px 8px rgba(229, 229, 229, 0.5);
-  .container{
+  > .container{
+    position: relative;
     display: flex;
     align-items: center;
+
+    height: 100%;
   }
 }
 
@@ -22,11 +25,12 @@
 /* nav
   ========================================================================== */
 .main-nav{
-  display: flex;
   flex-grow: 1;
-  justify-content: flex-end;
+  transition: height 284ms ease 0s;
   .nav-list{
     display: flex;
+    justify-content: flex-end;
+
     li{
       position: relative;
       display: flex;
@@ -38,8 +42,11 @@
       padding: 0 1.2rem;
       border-bottom: 2px solid transparent;
     }
+    .nav-icon{
+      display: none;
+    }
     .nav-link{
-      transition: all .2s ease-in-out;
+      transition: height .2s ease-in-out;
       &:hover, &.active{
         border-bottom: 2px solid #2593FC;
       }
@@ -53,6 +60,54 @@
         bottom: 0;
         left: 0;
         right: 0;
+      }
+    }
+  }
+}
+
+
+.nav-icon{
+  display: none;
+  font-size: 16px;
+  color: #2e2e2e;
+}
+@media screen and (max-width: 600px) {
+  .main-nav{
+    position: absolute;
+    top: 50px;
+    // remove container padding
+    left: -15px;
+    right: -15px;
+    height: 0;
+    overflow: hidden;
+    z-index: 1;
+  }
+  .nav-icon{
+    display: block;
+    position: absolute;
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .main-nav.responsive {
+    position: absolute;
+    top: 50px;
+    // remove container padding
+    left: -15px;
+    right: -15px;
+    background: rgba(242,242,242,.98);
+    border-top: 1px solid #F3F3F3;
+    box-shadow: 0 2px 8px rgba(229, 229, 229, 0.5);
+    height: auto;
+
+    .nav-list{
+      flex-direction: column;
+      .nav-link.active, .nav-link:hover{
+        border-bottom: none;
+      }
+      .nav-link.active a{
+        color: #0366d6;
       }
     }
   }

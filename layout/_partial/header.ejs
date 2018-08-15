@@ -4,8 +4,10 @@
       <img src="<%= theme.logo %>" alt="<%= theme.title %>" class="logo-img">
     </a>
     <span class="nav-separator"></span>
-      <%- search_form({ class: 'search-form', text: '搜索文章' }) %>
-
+    <%- search_form({ class: 'search-form', text: '搜索文章' }) %>
+    <a href="javascript:void(0);" class="nav-icon">
+      <i class="fas fa-bars"></i>
+    </a>
     <nav class="main-nav">
       <ul class="nav-list">
         <% for(let i in theme.menu){ %>

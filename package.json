@@ -13,7 +13,7 @@
     "theme"
   ],
   "author": "voya",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@babel/polyfill": "^7.0.0-beta.51",
     "@babel/runtime": "^7.0.0-beta.51",

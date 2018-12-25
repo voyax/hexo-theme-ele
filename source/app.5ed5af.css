@@ -6,9 +6,9 @@ html {
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
   height: 100%;
-  font-family: "Hiragino Sans GB", "\534E\6587\7EC6\9ED1", "STHeiti", "\5FAE\8F6F\96C5\9ED1", "Microsoft YaHei", SimHei, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "STHeiti", "Hiragino Sans GB", "\534E\6587\7EC6\9ED1", "\5FAE\8F6F\96C5\9ED1", "Microsoft YaHei", SimHei, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
-  color: #333;
+  color: #1b2733;
 }
 *,
 *::before,
@@ -80,8 +80,10 @@ input:focus {
 /**
 * utils
 */
+b,
+strong,
 .bold {
-  font-weight: bold !important;
+  font-weight: 500 !important;
 }
 .container {
   max-width: 815px;
@@ -137,18 +139,18 @@ h5,
 h6 {
   margin-bottom: .2em;
   line-height: 1.1em;
-  font-weight: 300;
+  font-weight: normal;
 }
 h1 {
-  font-size: 2.25em;
+  font-size: 2.86em;
 }
 h2 {
-  font-size: 2em;
-  margin-bottom: .83em;
+  font-size: 1.5em;
+  margin-bottom: 0.63em;
 }
 h3 {
   font-size: 1.7em;
-  margin-bottom: .83em;
+  margin-bottom: 0.83em;
 }
 h4 {
   font-size: 1.4em;
@@ -158,8 +160,8 @@ h6 {
   font-size: 1.2em;
 }
 p {
-  line-height: 1.8em;
-  margin: 0 0 .8em;
+  line-height: 1.625em;
+  margin: 0 0 1em;
 }
 blockquote {
   margin: 0;
@@ -171,7 +173,7 @@ code {
   padding: .2rem .4rem;
   font-size: 90%;
   background-color: #f8f9fa;
-  color: #bd4147;
+  color: #333;
   border-radius: .25rem;
 }
 /**
@@ -182,18 +184,27 @@ code {
   font-size: 16px;
 }
 .page--article h1 {
-  margin-top: 0;
-  margin-bottom: .8em;
+  margin-bottom: 0.8em;
   font-size: 1.95552em;
-  font-weight: 500;
+  font-weight: normal;
 }
 .page--article h2 {
   font-size: 1.25em;
-  font-weight: bold;
+  margin-top: 1.6em;
+  margin-bottom: 1em;
+  font-weight: normal;
 }
 .page--article h3 {
   font-size: 1.125em;
-  font-weight: bold;
+  margin-top: 1.6em;
+  margin-bottom: .83em;
+  font-weight: normal;
+}
+.page--article h4 {
+  font-size: 1.06em;
+  margin-top: 1.3em;
+  margin-bottom: .6em;
+  font-weight: normal;
 }
 .page--article ul,
 .page--article ol {
@@ -359,6 +370,7 @@ code {
           transform: translateY(-50%);
 }
 .article-list {
+  font-family: "STHeiti", "Hiragino Sans GB", "\534E\6587\7EC6\9ED1", "\5FAE\8F6F\96C5\9ED1", "Microsoft YaHei", SimHei, "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin-top: 24px;
 }
 .article-list > li {
@@ -376,6 +388,7 @@ code {
   padding-left: 1.4em;
 }
 .article-list .title {
+  margin-top: 0;
   font-size: 24px;
   font-weight: normal;
   color: #2e2e2e;
@@ -386,6 +399,7 @@ code {
   color: rgba(0, 0, 0, 0.3);
 }
 .excerpt {
+  font-family: "STHeiti", "Hiragino Sans GB", "\534E\6587\7EC6\9ED1", "\5FAE\8F6F\96C5\9ED1", "Microsoft YaHei", SimHei, "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #4c4948;
   line-height: 1.8;
 }
@@ -402,8 +416,9 @@ code {
 .excerpt h4,
 .excerpt h5,
 .excerpt h6 {
-  margin-bottom: 0;
-  font-weight: bold;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  font-weight: normal;
   font-size: 14px;
   line-height: 1.8rem;
   color: rgba(0, 0, 0, 0.5);

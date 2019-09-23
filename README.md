@@ -6,7 +6,14 @@ An elegant [Hexo](http://hexo.io) theme for pure reading, thinking and writing.
 
 ➡ [Demo](https://voyax.me/)
 
-![](http://oe54phg1r.bkt.clouddn.com/blog/2018-08-16-Google%20Chrome_2018-08-16%2000-03-24%402x.png)
+![](https://s2.ax1x.com/2019/09/23/uiZX9S.png)
+
+## Changelog
+
+**1.2.0**
+
+* Adjust article page ui for better reading.(Reference to [好讀的排版指南](https://medium.com/deerlight/%E5%A5%BD%E8%AE%80%E7%9A%84%E6%8E%92%E7%89%88%E6%8C%87%E5%8D%97-34b9d2a0ca23))
+
 
 ## Installing
 

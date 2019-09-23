@@ -1,5 +1,5 @@
 .main-header{
-  height: 50px;
+  height: 5rem;
   background: #FDFDFD;
   box-shadow: 0 2px 8px rgba(229, 229, 229, 0.5);
   > .container{
@@ -14,12 +14,12 @@
 /* logo
   ========================================================================== */
 .logo{
-  height: 40px;
+  height: 4rem;
   margin-right: 1.2rem;
 }
 .logo-img{
-  width: 40px;
-  height: 40px;
+  width: 4rem;
+  height: 4rem;
 }
 
 /* nav
@@ -30,16 +30,15 @@
   .nav-list{
     display: flex;
     justify-content: flex-end;
-
     li{
       position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
       list-style: none;
-      height: 50px;
-      font-size: 1.17rem;
-      padding: 0 1.2rem;
+      height: 5rem;
+      font-size: 1.4rem;
+      padding: 0 1.4rem;
       border-bottom: 2px solid transparent;
     }
     .nav-icon{
@@ -68,16 +67,16 @@
 
 .nav-icon{
   display: none;
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #2e2e2e;
 }
 @media screen and (max-width: 600px) {
   .main-nav{
     position: absolute;
-    top: 50px;
+    top: 5rem;
     // remove container padding
-    left: -15px;
-    right: -15px;
+    left: -1.5rem;
+    right: -1.5rem;
     height: 0;
     overflow: hidden;
     z-index: 1;
@@ -92,10 +91,10 @@
 @media screen and (max-width: 600px) {
   .main-nav.responsive {
     position: absolute;
-    top: 50px;
+    top: 5rem;
     // remove container padding
-    left: -15px;
-    right: -15px;
+    left: -1.5rem;
+    right: -1.5rem;
     background: rgba(242,242,242,.98);
     border-top: 1px solid #F3F3F3;
     box-shadow: 0 2px 8px rgba(229, 229, 229, 0.5);
@@ -118,10 +117,10 @@
 .nav-separator{
   border-top: 2px solid transparent;
   border-bottom: 2px solid transparent;
-  height: 24px;
+  height: 2.4rem;
   border-left: 1px solid #ebedee;
-  line-height: 22px;
-  height: 22px;
+  line-height: 1;
+  height: 2.2rem;
   vertical-align: middle;
   display: inline-block;
 }
@@ -130,8 +129,9 @@
   ========================================================================== */
 .search-form{
   position: relative;
+  font-size: 1.4rem;
   input{
-    padding-left: 28px;
+    padding-left: 2.8rem;
     border: none;
     background: transparent;
     &::placeholder{

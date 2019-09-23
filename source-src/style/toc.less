@@ -2,21 +2,30 @@
   display: flex;
   position: fixed;
   top: 0;
-  font-size: 14px;
+  font-size: 1.4rem;
   left: calc(~"-230px + 1.2em");
   height: 100vh;
   width: 230px;
   overflow-x: hidden;
   background: #F8F8F8;
-  transition: all .3s;
+  transition: all .38s;
 
   ol{
     list-style: none;
+    line-height: 1.4em;
   }
+}
 
-  &.show{
-    left: 0;
-  }
+ol.toc-child{
+  padding-left: 1em;
+}
+
+.toc-level-2{
+  font-size: 1.6rem;
+  margin-bottom: 1em;
+}
+.toc-level-3{
+  font-size: 1.4rem;
 }
 
 .toc-link{
@@ -28,11 +37,16 @@
 }
 
 .toc-tip{
+  position: relative;
   padding-top: 1em;
   width: 1.2em;
   writing-mode: vertical-rl;
   background: rgba(0, 0, 0, 0.7);
   color: #CCCCCC;
+  &::after{
+    position: absolute;
+    content: '▼';
+  }
 }
 
 .toc{
@@ -41,6 +55,15 @@
   flex: 1;
 
   overflow: hidden;
+}
+
+// show
+.toc-container.show{
+  left: 0;
+  .toc-tip::after{
+    position: absolute;
+    content: "◀";
+  }
 }
 
 @media screen and (max-width: 815px) {

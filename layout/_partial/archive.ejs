@@ -1,17 +1,22 @@
-<div class="page--archive">
-  <div class="container">
-    <div class="archive-list">
-      <% if(is_category()){ %>
-        <div class="archive-title">
-          <i class="fas fa-barcode"></i>
-          <%= page.category %>
-        </div>
-      <% } else if(is_tag()){ %>
-        <div class="archive-title">
-          <i class="fas fa-tags"></i>
-          <%= page.tag %>
-        </div>
-      <% } %>
+<% let isTopicCard = is_category() || is_tag(); %>
+<div class="<%- isTopicCard ? 'page--topic-card' : '' %> page--archive">
+  <div class="<%- isTopicCard ? 'topic-card' : '' %> container">
+    <% if(isTopicCard){ %>
+      <div class="topic-card__title">
+        <% if(is_category()){ %>
+          <div class="archive-title">
+            <!-- <i class="fas fa-barcode"></i> -->
+            <%= page.category %>
+          </div>
+        <% } else if(is_tag()){ %>
+          <div class="archive-title">
+            <!-- <i class="fas fa-tags"></i> -->
+            <%= page.tag %>
+          </div>
+        <% } %>
+      </div>
+    <% } %>
+    <div class="<%- isTopicCard ? 'topic-card__content' : '' %> archive-list">
       <% let last; %>
       <% page.posts.each(function(post, i){ %>
         <% let year = post.date.year(); %>
@@ -26,10 +31,10 @@
           <div class="archive-item__title"><a href="<%- url_for(post.path) %>"><%= post.title %></a></div>
         </div>
       <% }) %>
-    </div>
 
-    <% if (page.total > 1){ %>
-      <%- partial('pagination') %>
-    <% } %>
+      <% if (page.total > 1){ %>
+        <%- partial('pagination') %>
+      <% } %>
+    </div>
   </div>
 </div>

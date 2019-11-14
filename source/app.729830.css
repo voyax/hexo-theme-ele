@@ -181,8 +181,11 @@ code {
   border-radius: .25rem;
   line-height: 1.4;
 }
-strong {
+b {
   background-color: #ffeec9;
+}
+strong {
+  font-weight: 800;
 }
 /**
 * article

@@ -4,7 +4,7 @@
 
 An elegant [Hexo](http://hexo.io) theme for pure reading, thinking and writing.
 
-➡ [Demo](https://voyax.me/)
+➡ [Demo](http://www.voyax.me/)
 
 ![](https://s2.ax1x.com/2019/09/23/uiZX9S.png)
 

@@ -1,96 +1,128 @@
-h1, h2, h3, h4, h5, h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-bottom: .2em;
   line-height: 1.1em;
   font-weight: normal;
 }
-h1{
+
+h1 {
   font-size: 2.86em;
 }
-h2{
+
+h2 {
   font-size: 1.5em;
   margin-bottom: 0.63em;
 }
-h3{
+
+h3 {
   font-size: 1.7em;
   margin-bottom: 0.83em;
 }
-h4{
+
+h4 {
   font-size: 1.4em;
 }
-h5, h6{
+
+h5,
+h6 {
   font-size: 1.2em;
 }
-p{
-  line-height: 1.8em;
-  margin: 0 0 1.5em;
+
+p {
+  margin: 0 0 16px;
 }
 
-blockquote{
+blockquote {
   margin: 0;
   padding: 0 .6rem;
   border-left: 0.2rem solid #dfe2e5;
   color: #6a737d;
 }
 
-code{
-  padding: .2rem .4rem;
-  font-size: 90%;
-  background-color: #f7f8f9;
-  color: #333;
-  border-radius: .25rem;
-  line-height: 1.4;
-}
-
-b{
+b {
   background-color: rgb(255, 238, 201);
 }
 
 /**
 * article
 */
-.page--article{
+.page--article {
   text-align: justify;
-  font-size: 1.7rem;
-  h1, h2, h3, h4{
-    font-weight: bold;
-  }
-  h1{
-    margin-bottom: 0.8em;
-    font-size: 1.95552em;
-    font-weight: bold;
-  }
-  h2{
-    font-size: 1.25em;
-    margin-top: 1.6em;
-    margin-bottom: 1em;
-  }
-  h3{
-    font-size: 1.125em;
-    margin-top: 1.6em;
-    margin-bottom: .83em;
-  }
-  h4{
-    font-size: 1.06em;
-    margin-top: 1.3em;
-    margin-bottom: .6em;
+  font-size: 14px;
+  color: #24292e;
+  line-height: 1.5;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 24px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    line-height: 1.25;
   }
 
-  ul, ol{
+  h1, h2 {
+    font-size: 2em;
+    padding-bottom: .3em;
+    border-bottom: 1px solid #eaecef;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  h3 {
+    font-size: 1.25em;
+  }
+
+  h4 {
+    font-size: 1.06em;
+  }
+
+  h5 {
+    font-size: .875em;
+  }
+
+  h6 {
+    font-size: .85em;
+    color: #6a737d;
+  }
+
+  ul,
+  ol {
     padding-left: 2.2em;
     line-height: 1.8em;
     margin-bottom: 1em;
   }
 
-  li >:first-child{
+  li>:first-child {
     margin-bottom: 0;
   }
 
-  img{
+  img {
     display: block;
     margin: .5em auto;
 
     max-width: 100%;
     height: auto;
   }
-}
 
+  .page--article--title {
+    padding-bottom: 0;
+    border: none;
+  }
+
+  .page--article--date-info {
+    padding: 8px;
+    margin-bottom: 1.6rem;
+    background: #F6FFEE;
+    color: rgba(0, 0, 0, .85);
+  }
+}

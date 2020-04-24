@@ -8,7 +8,7 @@
             <a href="<%- url_for(post.path) %>">
               <h2 class="title">
                 <%= post.title %>
-                <small><%= post.updated.format('YYYY.MM.DD') %></small>
+                <small><%= post.date.format('YYYY.MM.DD') %></small>
               </h2>
             </a>
             <div class="excerpt"><%- post.excerpt %></div>
